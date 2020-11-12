@@ -50,7 +50,6 @@ li.grid-item {
 }
 li.grid-item:hover {
   border-color: black;
-  overflow-y: visible;
 }
 li.grid-item:hover h3 {
 background-color: rgb(19, 100, 127);
@@ -73,14 +72,16 @@ transition: all 300ms;
   float: left;
   position: relative;
 }
-.grid-item:nth-child(n+2){
+.grid-item:nth-child(n+3){
   width: 44%;
   height: 300px;
   overflow: hidden;
   display: block;
   float: right;
 }
-
+.grid-item:nth-child(n+3):hover {
+  overflow: auto;
+}
 .grid-item:first-child:hover {
   border-color: #F3B136;
   transition: all 300ms;
@@ -119,6 +120,7 @@ transition: all 300ms;
   display: block;
   float: left;
   transition: all 300ms;
+  overflow: hidden;
 }
 .grid-item:first-child:hover,
 .grid-item:nth-child(2):hover {
@@ -135,7 +137,9 @@ transition: all 300ms;
   width: 27.3%;
   float: left;
   height: 370px;
-  overflow: hidden;
+}
+.grid-item:nth-child(n+3):hover {
+  overflow: auto;
 }
 /* -------------------- Flex ------------------------ */
 #grid-flex {
@@ -158,7 +162,9 @@ width: 44%;
 /* ----------------------- Desktop ---------------------------- */
 @media (min-width: 1024px){
 /* --------------------Floats------------------------ */
-
+#grid-floats li.grid-item {
+  overflow: hidden;
+}
 .grid-item:first-child{
   width: 44%;
   max-height: 470px;
@@ -178,6 +184,7 @@ width: 44%;
   width: 19%;
   max-height: 470px;
   float: left;
+  height: 470px;
 }
 /* -------------------- Flex ------------------------ */
 #grid-flex {
