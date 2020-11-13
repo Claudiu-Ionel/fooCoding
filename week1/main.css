@@ -18,8 +18,8 @@ section h2 {
   background-color: #F3B136;
   color: aliceblue;
   clear: both;
-  margin-left: -3%;
-  margin-right: -3%;
+  margin-left: -3.11%;
+  margin-right: -3.11%;
 }
 ul {
   list-style-type: none;
@@ -72,14 +72,14 @@ transition: all 300ms;
   float: left;
   position: relative;
 }
-.grid-item:nth-child(n+3){
+.grid-item:nth-child(n+2){
   width: 44%;
   height: 300px;
   overflow: hidden;
   display: block;
   float: right;
 }
-.grid-item:nth-child(n+3):hover {
+.grid-item:nth-child(n+2):hover {
   overflow: auto;
 }
 .grid-item:first-child:hover {
