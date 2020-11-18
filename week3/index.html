@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/f830cab1f0.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/f830cab1f0.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./main.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -89,17 +92,21 @@
           <div class="hamburger"><div></div></div>
         </div>
       </nav>
-      <div class="top-banner pd-15-lr">
-        <img
-          src="https://www.tampere-talo.fi/uploads/sites/2/2017/02/m-131-web-v-1024x295.jpg"
-          alt=""
-        />
-      </div>
-      <div class="top-text pd-15-lr">
-        <div class="top-text__wrapper pd-15">
-          <h1>The world's only Moomin Museum</h1>
-          <h2>in Tampere, Finland!</h2>
-          <a href=""> <div class="orange-circle">Info</div></a>
+      <div class="top-content container-width pd-15-lr">
+        <div class="top-banner">
+          <img
+            src="https://www.tampere-talo.fi/uploads/sites/2/2017/02/m-131-web-v-1024x295.jpg"
+            alt=""
+          />
+        </div>
+        <div class="top-text">
+          <div class="top-text__wrapper pd-15">
+            <div class="title">
+              <h1>The world's only Moomin Museum</h1>
+              <h2>in Tampere, Finland!</h2>
+            </div>
+            <a href=""> <div class="orange-circle">Info</div></a>
+          </div>
         </div>
         <div class="bottom-image">
           <img
@@ -108,7 +115,7 @@
           />
         </div>
       </div>
-      <div class="info-block pd-15-lr">
+      <div class="info-block pd-15-lr container-width">
         <div class="info-block__text pd-15">
           <p>
             Moomin Museum/Opening hours:Tue-Wed 9am-5pm,Thu-Fri 9am-7pm,Sat-Sun
@@ -124,12 +131,35 @@
           </div>
         </div>
       </div>
-      <div class="exhibition pd-15-lr">
-        <div class="exhibition__text">
-          <h2>Exhibitions</h2>
+      <div class="exhibition pd-15-lr container-width">
+        <div class="content-block">
+          <div class="__eyes">
+            <div class="left">
+              <img
+                src="https://www.tampere-talo.fi/app/themes/muumimuseo/images/silmat-vasen.gif"
+                alt=""
+              />
+            </div>
+            <div class="right">
+              <img
+                class="rigth"
+                src="https://www.tampere-talo.fi/app/themes/muumimuseo/images/silmat-oikea.gif"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="news__text">
+            <h2>Exhibitions</h2>
+          </div>
         </div>
       </div>
-      <div class="exh-details pd-15-lr">
+      <div class="exh-details pd-15-lr container-width">
+        <div class="exh-details__img">
+          <img
+            src="https://www.tampere-talo.fi/uploads/sites/2/2017/12/A7A5306-570px.jpg"
+            alt=""
+          />
+        </div>
         <section class="exh-details__next pd-30">
           <h2>What Happens Next?</h2>
           <p>
@@ -144,10 +174,12 @@
             mysterious disappearance of the Moomins one grey November day.
           </p>
         </section>
-        <img
-          src="https://www.muumimuseo.fi/uploads/2020/01/8c564bd7-m-1090_rajausmall-800i-720x720.jpg"
-          alt=""
-        />
+        <div class="exh-details__img">
+          <img
+            src="https://www.muumimuseo.fi/uploads/2020/01/8c564bd7-m-1090_rajausmall-800i-720x720.jpg"
+            alt=""
+          />
+        </div>
         <section class="exh-details__observatory pd-30">
           <h2>In The observatory</h2>
           <p>
@@ -156,10 +188,12 @@
             illustrations
           </p>
         </section>
-        <img
-          src="https://www.tampere-talo.fi/uploads/sites/2/2017/08/A7A5934-260x260.jpg"
-          alt=""
-        />
+        <div class="exh-details__img">
+          <img
+            src="https://www.tampere-talo.fi/uploads/sites/2/2017/08/A7A5934-260x260.jpg"
+            alt=""
+          />
+        </div>
         <section class="exh-details__Events pd-30">
           <p>01/01/2021</p>
           <h2>Safe Events</h2>
@@ -169,12 +203,29 @@
           </p>
         </section>
       </div>
-      <div class="news pd-15-lr">
-        <div class="news__text">
-          <h2>News</h2>
+      <div class="news pd-15-lr container-width">
+        <div class="content-block">
+          <div class="__eyes">
+            <div class="left">
+              <img
+                src="https://www.tampere-talo.fi/app/themes/muumimuseo/images/silmat-vasen.gif"
+                alt=""
+              />
+            </div>
+            <div class="right">
+              <img
+                class="rigth"
+                src="https://www.tampere-talo.fi/app/themes/muumimuseo/images/silmat-oikea.gif"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="news__text">
+            <h2>News</h2>
+          </div>
         </div>
       </div>
-      <div class="mask pd-15-lr">
+      <div class="mask pd-15-lr container-width">
         <div class="mask__text">
           <h2>Please wear a mask when visiting us!</h2>
           <p>
@@ -183,18 +234,20 @@
           </p>
         </div>
       </div>
-      <div class="afternoon pd-15-lr">
+      <div class="afternoon pd-15-lr container-width">
         <div class="afternoon__text">
-          <h2>No free afternoons</h2>
-          <p>
-            Moomin Museum is following the safety guidelines and recommendations
-            on the last Fridays of the month have been cancelled as it is not
-            possible to keep safe distance
-          </p>
+          <div class="text-wrap">
+            <h2>No free afternoons</h2>
+            <p>
+              Moomin Museum is following the safety guidelines and
+              recommendations on the last Fridays of the month have been
+              cancelled as it is not possible to keep safe distance
+            </p>
+          </div>
           <a href=""> <div class="orange-circle">Covid-19</div></a>
         </div>
       </div>
-      <div class="quote">
+      <div class="quote container-width">
         <div class="quote__text pd-15-lr">
           <p>
             All things are so very uncertain and that's exactly what makes me
@@ -205,7 +258,7 @@
           </div>
         </div>
       </div>
-      <section class="exh-details pd-15-lr">
+      <section class="exh-details pd-15-lr container-width tampere">
         <div class="exh-details__wrapper pd-15-lr">
           <div class="exh-details__text pd-30-tb">
             <h2>Tampere Hall Shop</h2>
@@ -223,13 +276,14 @@
               postmark.
             </p>
           </div>
-        </div>
-        <img
+                  <img
           src="https://www.tampere-talo.fi/uploads/sites/2/2017/02/Kuvagalleria-5.jpg"
           alt=""
         />
+        </div>
+
       </section>
-      <div class="quote">
+      <div class="quote container-width">
         <div class="quote__text pd-15-lr">
           <p>
             ‘Well, it’ll be another nice long day tomorrow,’ said Moominmamma.
@@ -241,7 +295,7 @@
           </div>
         </div>
       </div>
-      <section class="exh-details pd-15-lr">
+      <section class="exh-details reading-room pd-15-lr container-width">
         <div class="exh-details__wrapper pd-15-lr">
           <img
             src="https://www.tampere-talo.fi/uploads/sites/2/2017/12/Photo-Iina-Martiskainen-web-1024x683.jpg"
@@ -339,11 +393,19 @@
             </div>
           </div>
           <div class="logo-block pd-15-lr">
-            <a href=""><img src="https://www.tampere-talo.fi/app/themes/tampere-talo/images/footer-logo-muumimuseo-center.png" alt=""></a> 
+            <a href=""
+              ><img
+                src="https://www.tampere-talo.fi/app/themes/tampere-talo/images/footer-logo-muumimuseo-center.png"
+                alt=""
+            /></a>
           </div>
           <div class="logo-block pd-15-lr">
             <span>© Muumimuseo 2017 I © Moomin Characters TM</span>
-            <span><img src="https://www.tampere-talo.fi/uploads/sites/2/2017/02/vaakuna_tampere_muumimuseo.png" alt=""></span>
+            <span
+              ><img
+                src="https://www.tampere-talo.fi/uploads/sites/2/2017/02/vaakuna_tampere_muumimuseo.png"
+                alt=""
+            /></span>
           </div>
         </section>
       </footer>

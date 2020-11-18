@@ -36,6 +36,7 @@ h4 {
 img {
   width: 100%;
   vertical-align: middle;
+  height: auto;
 }
 p {
   color: #333;
@@ -61,6 +62,7 @@ footer {
 .m-15-bot {
   margin-bottom: 15px;
 }
+
 /* ----------------- Slide Menu -----------------*/
 .slide-menu {
   display: none;
@@ -110,6 +112,7 @@ details .details__ul {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  position: relative;
 }
 .top-text__wrapper h1 {
   margin-top: 20px;
@@ -148,15 +151,37 @@ details .details__ul {
   width: 40px;
   height: 40px;
 }
+.content-block {
+  background-color: #363636;
+  position: relative;
+}
 .exhibition__text,
 .news__text {
   padding: 75px 0px;
-  background: #333;
+  position: relative;
+  z-index: 2;
 }
+.__eyes {
+  width: 100%;
+  position: absolute;
+  padding: 10px 25px 0px;
+  z-index: 1;
+  display: none;
+  justify-content: space-between;
+}
+.__eyes img {
+  display: inline-block;
+  width: 189px;
+  height: 189px;
+}
+
 .exhibition__text h2,
 .news__text h2 {
   color: #fff;
   text-align: center;
+}
+.exh-details .exh-details__img:first-child {
+  display: none;
 }
 .exh-details__Events p:first-child {
   margin-bottom: 0px;
@@ -195,6 +220,8 @@ details .details__ul {
   color: #35733c;
 }
 
+
+/* ------------------ Footer ------------------ */
 .links {
   margin-bottom: 15px;
   display: flex;
@@ -206,17 +233,22 @@ details .details__ul {
   width: 380px;
   height: 150px;
 }
-/* ------------------ Footer ------------------ */
 .footer__nav {
   padding: 70px 15px;
   font-family: "Montserrat", sans-serif;
   background: url("https://www.tampere-talo.fi/app/themes/muumimuseo/images/bg-footer-navi.jpg");
   background-size: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .footer__nav * {
   display: block;
   color: #fff;
   font-weight: 600;
+}
+.footer__nav p {
+  font-size: 14px;
 }
 .nav-block {
   margin-bottom: 10px;
@@ -250,8 +282,162 @@ a.btn {
   padding: 5px;
 }
 .logo-block img {
-  width: 56px;
+  width: 100%;
 }
-/* --------------- Smartphone --------------- */
-@media (min-width: 375px) {
+.logo-block span {
+  margin-right: 10px;
+}
+/* --------------- MediaQueries --------------- */
+@media (min-width: 462px) {
+  .__eyes {
+    display: flex;
+  }
+  a.btn {
+    display: block;
+  }
+}
+@media (min-width: 651px) {
+  .top-text__wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .top-text__wrapper .title {
+    padding: 10px 85px 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .top-text__wrapper a {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+  }
+}
+@media (min-width: 760px) {
+  .container-width {
+    margin: auto;
+    width: 750px;
+  }
+  .exhibition + .exh-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "text1 img1"
+      "img2  text2"
+      "text3 text3";
+  }
+  .exh-details__next {
+    grid-area: text1;
+  }
+  .exh-details__img:first-child {
+    grid-area: img1;
+  }
+  .exh-details__observatory {
+    grid-area: text2;
+  }
+  .info-block__text p {
+    font-size: 16px;
+    line-height: normal;
+  }
+  .news__text h2 {
+    font-size: 50px;
+  }
+  .quote__text p {
+    font-size: 44px;
+    line-height: normal;
+  }
+  .footer__logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-width {
+    width: 970px;
+  }
+  .top-content {
+    position: relative;
+  }
+  .top-text {
+    width: 100%;
+    position: absolute;
+    z-index: 4;
+    top: 240px;
+    left: 0px;
+    padding: 0px 80px;
+  }
+  .top-text__wrapper {
+    height: 139px;
+    background: #fff;
+    padding: 0;
+  }
+  .top-text__wrapper a {
+    bottom: -20px;
+    right: -30px;
+  }
+
+  .exhibition + .exh-details {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-areas: 
+    "img1 img2 img3"
+    "text1 text2 text3";
+  }
+  .exh-details .exh-details__img:first-child {
+  display: inherit;
+}
+  .exh-details__next {
+    grid-area: text1;
+  }
+  .exh-details__img:first-child {
+    grid-area: img1;
+  }
+  .exh-details__observatory {
+    grid-area: text2;
+  }
+  .afternoon__text {
+    display: flex;
+    flex-direction: row;
+    justify-content: ;
+  }
+  .afternoon__text .text-wrap {
+    width: 50%;
+    margin-left: 25%;
+  }
+  .afternoon__text a {
+    position: relative;
+    right: -80px;
+  }
+ .exh-details__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .exh-details__text {
+    padding: 20px 20px;
+  }
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0px;
+  }
+  .links__logo img {
+    width: 300px;
+    padding: 10px;
+  }
+  .footer__logos {
+    display: flex;
+    justify-content: space-evenly;
+
+  }
+  .logo-block {
+    width: 30%;
+  }
 }
