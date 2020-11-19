@@ -1,6 +1,8 @@
 const hamburger = document.querySelector('.hamburger');
 const main = document.querySelector('#main');
 const slideMenu = document.querySelector('.slide-menu');
+const details = document.querySelectorAll('.details');
+const topNav = document.querySelector('.main__nav');
 const body = document.getElementById('body');
 const movePx = parseInt(slideMenu.offsetWidth);
 console.log(movePx);
@@ -26,3 +28,4 @@ function slideOff(params) {
   main.style.right = "0px";
   body.style.overflow = "auto";
 }
+
