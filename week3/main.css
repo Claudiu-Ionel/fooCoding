@@ -99,7 +99,7 @@ details .details__ul {
   background: #fff;
   position: relative;
   z-index: 1000;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .main__nav {
@@ -107,6 +107,15 @@ details .details__ul {
   align-items: center;
   justify-content: space-between;
   padding: 15px;
+}
+.nav__links {
+  display: none;
+}
+.nav__links .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 .logo {
   margin-left: -15px;
@@ -127,7 +136,7 @@ details .details__ul {
   display: flex;
   justify-content: center;
   cursor: pointer;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   align-items: center;
 }
 .hamburger__content {
@@ -135,7 +144,7 @@ details .details__ul {
   height: 5px;
   background-color: #35733c;
   border-radius: 10px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .hamburger__content::before,
 .hamburger__content::after {
@@ -145,12 +154,12 @@ details .details__ul {
   height: 5px;
   background-color: inherit;
   border-radius: 5px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-.hamburger__content::before{
+.hamburger__content::before {
   transform: translateY(-16px);
 }
-.hamburger__content::after{
+.hamburger__content::after {
   transform: translateY(16px);
 }
 /* ------------------ Hamburger Animation ----------------- */
@@ -284,9 +293,8 @@ details .details__ul {
   color: #35733c;
 }
 
-
 /* ------------------ Footer ------------------ */
-.links {
+.footer-links {
   margin-bottom: 15px;
   display: flex;
   flex-direction: column;
@@ -449,13 +457,13 @@ a.btn {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: 0.5fr 1fr;
-    grid-template-areas: 
-    "img1 img2 img3"
-    "text1 text2 text3";
+    grid-template-areas:
+      "img1 img2 img3"
+      "text1 text2 text3";
   }
   .exh-details .exh-details__img:first-child {
-  display: inherit;
-}
+    display: inherit;
+  }
   .exh-details__next {
     grid-area: text1;
   }
@@ -468,7 +476,6 @@ a.btn {
   .afternoon__text {
     display: flex;
     flex-direction: row;
-  
   }
   .afternoon__text .text-wrap {
     width: 50%;
@@ -478,7 +485,7 @@ a.btn {
     position: relative;
     right: -80px;
   }
- .exh-details__wrapper {
+  .exh-details__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -486,7 +493,7 @@ a.btn {
   .exh-details__text {
     padding: 20px 20px;
   }
-  .links {
+  .footer-links {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -499,7 +506,6 @@ a.btn {
   .footer__logos {
     display: flex;
     justify-content: space-evenly;
-
   }
   .logo-block {
     width: 30%;
@@ -507,5 +513,63 @@ a.btn {
 }
 
 @media (min-width: 1200px) {
+  .hamburger {
+    display: none;
+  }
+  .container-width {
+    width: 1140px;
+  }
+  .main__nav {
+    width: 1140px;
+    margin: 0px auto;
+  }
+  .nav__links {
+    display: flex;
+  }
+  .nav__links details {
+    margin-top: 8px;
+    padding: 20px;
+  
+  }
+  .nav__links details summary {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-transform: uppercase;
+  }
+  .nav__links details summary::-webkit-details-marker {
+    display: none;
+  }
+  .nav__links details summary::focus {
+    display: none;
+  }
+  .nav__links ul {
+    color: #fff;
+    background-color: #35733c;
+  }
+  
+  .nav__links a {
+    color: #363636;
+    margin-top: 10px;
+    padding: 0px 20px;
+  }
 
+  .footer__nav {
+    justify-content: center;
+  }
+  .sub-links {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: start;
+    padding: 10px;
+    width: 220px
+  }
+  .sub-links li {
+    width: 90%;
+    padding: 10px;
+    word-break: keep-all;
+  }
 }
