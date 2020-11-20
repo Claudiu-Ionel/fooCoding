@@ -531,7 +531,7 @@ a.btn {
     display: flex;
   }
   .nav__links .details {
-    padding: 38px 20px;
+    padding: 41px 20px 35px;
     color: #363636;
   
   }
@@ -578,5 +578,17 @@ a.btn {
   }
   .sub-links li a{
     color: #fff;
+  }
+  .language {color: #363636;}
+  .language details img {
+    padding: 5px;
+    width: 18px;
+  }
+  .language-options {
+    background: #fff;
+    border: 1px solid grey;
+    position: absolute;
+    z-index: 6;
+
   }
 }
