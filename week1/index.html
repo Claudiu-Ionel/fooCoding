@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f830cab1f0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script  src="./node_modules/intersection-observer/intersection-observer.js"></script>
+    <script defer src="./app.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+
+    <div class="main">
+          <div class="banner"></div>
+      <section class="profile">
+        <div class="top-info">
+          <div class="my-image"></div>
+          <div class="personal-info">
+            <div class="hello">
+              HELLO
+              <div></div>
+            </div>
+            <div class="name-profession">
+              <p>I'm <span class="name">Claudiu Ionel</span></p>
+              <span>Junior Web developer</span>
+            </div>
+            <div class="info">
+              <div>
+                <ul>
+                  <li><b>AGE</b></li>
+                  <li><b>E-Mail</b></li>
+                  <li><b>BIRTHDAY</b></li>
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <li>26</li>
+                  <li>ionel.claudiu394@gmail.com</li>
+                  <li>03.09.1994</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-social">
+          <div class="container">
+            <div class="social-item">
+              <a href="https://www.facebook.com/claudiu.ionel.7"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <div class="social-item">
+              <a href="https://www.linkedin.com/in/claudiu-ionel-636696193/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="social-item">
+              <a href="https://github.com/Claudiu-Ionel"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bio">
+        <p>
+          Hello! I'm Claudiu Ionel. Junior Web Developer specializing in front
+          end development. Currently undergoing two Web Developer courses that
+          are due to finalize in roughly half a year. Programming languages
+          learned throughout the courses: HTML, CSS, JavaScript and additionally
+          CLI (Git Bash).
+        </p>
+      </section>
+      <section class="section pro-skills">
+        <h2 class="section-title">Professional Skills</h2>
+        <div class="skill-bars">
+          <div class="skill-bars__wrapper">
+            <div class="bar-wrapper">
+              <div class="specs">
+                <p>HTML & CSS</p>
+                <span class="percent">89%</span>
+              </div>
+              <div class="bar legendary" style="width: 89%"></div>
+            </div>
+            <div class="bar-wrapper">
+              <div class="specs">
+                <p>JavaScript</p>
+                <span class="percent">75%</span>
+              </div>
+              <div class="bar epic" style="width: 75%"></div>
+            </div>
+            <div class="bar-wrapper">
+              <div class="specs">
+                <p>Wix</p>
+                <span class="percent">50%</span>
+              </div>
+              <div class="bar rare" style="width: 50%"></div>
+            </div>
+            <div class="bar-wrapper">
+              <div class="specs">
+                <p>Git</p>
+                <span class="percent">30%</span>
+              </div>
+              <div class="bar basic" style="width: 30%"></div>
+            </div>
+          </div>
+          <div class="legend">
+            <div class="legend-item">
+              <p>Basic</p>
+              <div class="basic"></div>
+            </div>
+            <div class="legend-item">
+              <p>Rare</p>
+              <div class="rare"></div>
+            </div>
+            <div class="legend-item">
+              <p>Epic</p>
+              <div class="epic"></div>
+            </div>
+            <div class="legend-item">
+              <p>Legendary</p>
+              <div class="legendary"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section work-experience">
+        <h2 class="section-title">Work Experience</h2>
+
+        <ul>
+          <div class="middle-bar"></div>
+          <li class="box left">
+            <div class="year">2016 - 2018</div>
+            <div class="company-name">Huskomfort</div>
+            <div class="job-position">Driver/translator</div>
+            <div class="job-description">
+              Assigned the role of driver and translator for the company.
+            </div>
+          </li>
+          <li class="box right">
+            <div class="year">2018 - 2019</div>
+            <div class="company-name">Vinternatt</div>
+            <div class="job-position">Watchman/Cook</div>
+            <div class="job-description">
+              During night shifts had the oportunity to work with people in need
+              and kept them safe and well fed over the night.
+            </div>
+          </li>
+          <li class="box left">
+            <div class="year">2019 - 2020</div>
+            <div class="company-name">Eriks Hjälpen</div>
+            <div class="job-position">Volunteer/Shop Assistant/Cashier</div>
+            <div class="job-description">
+              Tasked with the duty of Choosing and placing items on shelves ,
+              selling furniture items to clients and working as a cashier.
+            </div>
+          </li>
+          <li class="box right">
+            <div class="year">Undergoing</div>
+            <div class="company-name">BHHF</div>
+            <div class="job-position">Intern/IT Officer</div>
+            <div class="job-description">
+              Having the responsibilities of updating, maintaining and improving
+              the organizations website. Also in charge of IT related matters.
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="projects">
+        <div class="animation-area">
+          <div class="clouds l-cloud"><i class="fas fa-cloud"></i></div>
+          <div class="clouds e-cloud"><i class="fas fa-cloud"></i></div>
+          <div class="clouds r-cloud"><i class="fas fa-cloud"></i></div>
+          <div class="clouds b-cloud"><i class="fas fa-cloud"></i></div>
+          <div class="airplane-wrapper">
+            <!-- <img
+              class="airplane"
+              src="./img/favpng_airplane-aircraft-cartoon.png"
+              alt="airplane image"
+            /> -->
+            <i class="fas fa-plane"></i>
+            <div class="airplane--ribbon">
+              <div class="title">My projects</div>
+              <div class="projects-box">
+                <div>
+                  <i class="fas fa-tasks"></i> <a href="https://claudiu-ionel.github.io/TaskList.io/">Tasklist.io</a>
+                </div>
+                <div>
+                  <i class="fas fa-desktop"></i> <a href="https://claudiu-ionel.github.io/MoominMuseumCopy/">Moomin Website</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section education">
+        <h2 class="section-title">Education</h2>
+
+        <ul>
+          <div class="middle-bar"></div>
+          <li class="box left">
+            <div class="hello">
+              2010 - 2013
+              <div></div>
+            </div>
+            <div class="certificate">
+              Certificate for Mathematics and informatics
+            </div>
+            <div class="institute-name">Ion Mincu</div>
+          </li>
+          <li class="box right">
+            <div class="hello">
+              2013 - 2015
+              <div></div>
+            </div>
+            <div class="certificate">
+              Bachelor in English Literature - Unfinished
+            </div>
+            <div class="institute-name">Transilvania University</div>
+          </li>
+          <li class="box left">
+            <div class="hello">
+              2018 - 2019
+              <div></div>
+            </div>
+            <div class="certificate">Certificate for Swedish</div>
+            <div class="institute-name">SFI</div>
+          </li>
+          <li class="box right">
+            <div class="hello">
+              2019 - 2020
+              <div></div>
+            </div>
+            <div class="certificate">Certificate for Front end Development</div>
+            <div class="institute-name">IT School</div>
+          </li>
+          <li class="box left">
+            <div class="hello">
+              Undergoing
+              <div></div>
+            </div>
+            <div class="certificate">Front end Development</div>
+            <div class="institute-name">FooCoding</div>
+          </li>
+        </ul>
+      </section>
+      <section class="interests">
+        <h2 class="section-title">My interests</h2>
+        <div class="hobbies-wrapper">
+          <div class="text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad unde
+            itaque distinctio veritatis cumque eaque, voluptatum doloremque modi
+            rem quos dolorem quasi, ipsum quae possimus at pariatur placeat
+            animi reiciendis.
+          </div>
+          <ul class="hobbies">
+            <div class="hobby basic-font">
+              <i class="fas fa-biking"></i>
+              <div class="hobby-info">Biking</div>
+            </div>
+            <ul class="hobby rare-font">
+              <i class="fas fa-swimmer"></i>
+              <div class="hobby-info">Swimming</div>
+            </ul>
+            <ul class="hobby epic-font">
+              <i class="fas fa-dumbbell"></i>
+              <div class="hobby-info">Workout</div>
+            </ul>
+            <ul class="hobby legendary-font">
+              <i class="fas fa-laptop-code"></i>
+              <div class="hobby-info">Coding</div>
+            </ul>
+            <ul class="hobby legendary-font">
+              <i class="fas fa-gamepad"></i>
+              <div class="hobby-info">Gaming</div>
+            </ul>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <h2 class="section-title">References</h2>
+      <div class="references">
+        <div class="references-item">
+          <h3>CSS stuff</h3>
+          <ul>
+            <li><a href="https://css-tricks.com/snippets/css/css-triangle/">CSS-triangle</a></li>
+            <li><a href="https://www.w3schools.com/css/css3_animations.asp">CSS animation</a></li>
+            <li><a href="https://www.w3schools.com/css/css3_shadows_box.asp">Box shadow</a></li>
+            <li><a href="https://www.w3schools.com/css/css_tooltip.asp">CSS Tooltips</a></li>
+          </ul>
+        </div>
+        <div class="references-item">
+          <h3>Intersection Observer API</h3>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=T8EYosX4NOo&t=788s&ab_channel=KevinPowell">Introduction by Kevin Powell</a></li>
+            <li><a href="https://www.youtube.com/watch?v=huVJW23JHKQ&ab_channel=KevinPowell">Fade in items by Kevin Powell</a></li>
+          </ul>
+        </div>
+        <div class="references-item">
+          <h3>Icons</h3>
+          <ul>
+            <li><a href="https://fontawesome.com/">Font Awesome Link</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
