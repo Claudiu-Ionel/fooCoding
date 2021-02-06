@@ -2,10 +2,8 @@
 fooCoding Homework
 
 ## Table Of Contents
-* [HTML/CSS] (#HTML/CSS)
-* [JavaScript1](#JavaScript)
-
-### Module goals
+* HTML/CSS
+* JavaScript1
 
 ## HTML/CSS
 
