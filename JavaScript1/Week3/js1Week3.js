@@ -3,9 +3,10 @@ console.log(`==================Ex 1=======================`);
 let myString = "hello,this,is,a,difficult,to,read,sentence";
 console.log(myString);
 console.log(`The length of myString is : ${myString.length}`);
-
-myString = myString.split(',').join(' ');
-console.log(myString);
+// newString = myString.replace(/,/g, " ");
+// newString = myString.split(',').join(' ');
+newString = myString.replaceAll(",", " ");
+console.log(newString);
 
 // EX 2
 console.log(`==================Ex 2=======================`);
@@ -20,7 +21,7 @@ console.log(`The array has a length of: ${favoriteAnimals.length}`);
 favoriteAnimals.splice(3, 1);
 console.log(favoriteAnimals);
 let meerkatIndex = favoriteAnimals.indexOf("meerkat");
-console.log(`The item you are looking for is at index: ${meerkatIndex}`);;
+console.log(`The item you are looking for is at index: ${meerkatIndex}`);
 
 // MORE JAVASCRIPT
 
@@ -29,13 +30,17 @@ console.log(`==================Ex 1=======================`)
 
 function sum(num1, num2, num3) {
   let sum = num1 + num2 + num3;
-  console.log(sum);
-  return sum
+  return sum;
 }
-sum(34, 55, 1224);
 
 
+const sum2 = (x1, x2, x3) => x1 + x2 + x3;
+
+console.log(sum2(1, 2, 3));
+console.log(sum(1, 2, 3));
 console.log(`==================Ex 2=======================`);
+
+
 function colorCar(color) {
   console.log(`a ${color} car`);
 }
@@ -54,21 +59,34 @@ function logObject(obj) {
   console.log(obj);
 }
 
+function printObject(obj){
+  let output = [];
+  for (const key in obj) {
+    output.push(`key ${key} value ${obj[key]}`) ;
+  }
+  return output.join(`\n`);
+}
+console.log(printObject(awesomeObj));
 logObject(awesomeObj);
 
 console.log(`==================Ex 4=======================`);
 
 function vehicleType(color, type) {
   if (type === 1) {
-    console.log(`a ${color} car`);
+    type = "car";
   } else if (type === 2) {
-    console.log(`a ${color} motorbike`);
+    type = "motorbike";
+  } else {
+    return "invalid code"
   }
+  return `a ${color} ${type}`
 }
-vehicleType("black", 1);
+console.log(vehicleType("black", 1));
 
 console.log(`==================Ex 5=======================`);
-console.log((3 === 3) ? "yes" : "no");
+
+let yesOrNo = (3 === 3) ? "yes" : "no";
+console.log(yesOrNo);
 
 console.log(`==================Ex 6=======================`);
 
@@ -104,30 +122,43 @@ console.log(vehicles[2]);
 
 console.log(`==================Ex 9=======================`);
 
+// This function will not handle all the cases. Ex : if we don't have an index in the array : 
+// Ex : console.log(vehicle("green", 5, 1)); - This will return "a green new undefined";
+// function vehicle(color, type, age) {
+
+//   if (age > 1){
+//     age = "used";
+//   } else if(age <= 1){
+//     age = "new";
+//   } else {
+//     console.log("we don't have that type of vehicle");
+//   };
+
+//   console.log(`a ${color} ${age} ${vehicles[type]}`); 
+
+// }
+// vehicle("green", 5, 1);
+
+
 function vehicle(color, type, age) {
-
-  if (age === 5){
-    age = "used";
-  } else if(age === 1){
-    age = "new";
-  };
-
-  console.log(`a ${color} ${age} ${vehicles[type - 1]}`); 
-
-}
-vehicle("green", 3, 1);
-
+  for (let i = 0; i < vehicles.length; i++){
+    if (type === i) {
+      age > 0 ? console.log(`a ${color} used ${vehicles[i]}`) : console.log(`a ${color} new ${vehicles[i]}`);
+    }
+  }
+} 
+vehicle("red", 2, 1);
 console.log(`==================Ex 10=======================`);
 
 function makeAdvertisement(){
   let message = "Amazing Joe's Garage, we service ";
   for (let i = 0; i < vehicles.length; i++) {
     if (i === (vehicles.length - 2)) {
-      message = message + `${vehicles[i]}s and `
+      message += `${vehicles[i]}s and `
     } else if (i === (vehicles.length - 1)) {
-      message = message + `${vehicles[i]}s.`
+      message += `${vehicles[i]}s.`
     } else {
-      message = message + `${vehicles[i]}s, `
+      message += `${vehicles[i]}s, `
     }
   }
 
@@ -148,7 +179,7 @@ let emptyObject = {};
 console.log(`==================Ex 13=======================`);
 
 let fooCoding = {
-  teachers: ["Seif", "Joseph"]
+  teachers: ["Seif", "Joseph", "Baraa"]
 }
 
 console.log(`==================Ex 14=======================`);
@@ -171,6 +202,21 @@ console.log(`I thik that: In case of x == y , they will be equal, as they have t
 
 console.log(`Well I was so Wrong! T_T`);
 
+/* 
+value types :
+numbers 
+strings
+boolean
+null
+undefined
+
+reference types
+arrays
+objects
+functions
+
+*/
+
 console.log(`==================Ex 16=======================`);
 
 let o1 = { foo: "bar" };
@@ -189,3 +235,7 @@ let bar = 42;
 typeof typeof bar;
 console.log(`the output of this will be string. first we will get the typeof 42 which will return a string "number" then we will get the typeof "number" which is a string`);
 console.log(typeof typeof bar);
+
+
+// Work at Home
+
